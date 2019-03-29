@@ -13,6 +13,8 @@
 		E896E5D8224E990B005CC01F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E896E5D7224E990B005CC01F /* Assets.xcassets */; };
 		E896E5DB224E990B005CC01F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E896E5D9224E990B005CC01F /* LaunchScreen.storyboard */; };
 		E896E5E6224EA347005CC01F /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896E5E5224EA347005CC01F /* CategoryCell.swift */; };
+		E896E5E8224EA783005CC01F /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896E5E7224EA783005CC01F /* Category.swift */; };
+		E896E5EC224EAACC005CC01F /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E896E5EB224EAACC005CC01F /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E896E5DA224E990B005CC01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E896E5DC224E990B005CC01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E896E5E5224EA347005CC01F /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		E896E5E7224EA783005CC01F /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		E896E5EB224EAACC005CC01F /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		E896E5CF224E990A005CC01F /* CoderSwagApp */ = {
 			isa = PBXGroup;
 			children = (
+				E896E5E9224EAAAF005CC01F /* services */,
 				E896E5E4224EA2FB005CC01F /* view */,
 				E896E5E3224EA2B0005CC01F /* model */,
 				E896E5E2224E99C5005CC01F /* controller */,
@@ -79,6 +84,7 @@
 		E896E5E3224EA2B0005CC01F /* model */ = {
 			isa = PBXGroup;
 			children = (
+				E896E5E7224EA783005CC01F /* Category.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -89,6 +95,14 @@
 				E896E5E5224EA347005CC01F /* CategoryCell.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		E896E5E9224EAAAF005CC01F /* services */ = {
+			isa = PBXGroup;
+			children = (
+				E896E5EB224EAACC005CC01F /* DataService.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,8 @@
 				E896E5D3224E990A005CC01F /* CategoriesVC.swift in Sources */,
 				E896E5E6224EA347005CC01F /* CategoryCell.swift in Sources */,
 				E896E5D1224E990A005CC01F /* AppDelegate.swift in Sources */,
+				E896E5E8224EA783005CC01F /* Category.swift in Sources */,
+				E896E5EC224EAACC005CC01F /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
