@@ -9,6 +9,8 @@
 import UIKit
 
 class CategoriesVC: UIViewController {
+    
+    @IBOutlet weak var categoryTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()

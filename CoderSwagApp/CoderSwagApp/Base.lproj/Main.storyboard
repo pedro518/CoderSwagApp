@@ -24,15 +24,59 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Nvv-7p-564">
+                                <rect key="frame" x="0.0" y="119" width="375" height="548"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="6sh-cF-hYN" customClass="CategoryCell" customModule="CoderSwagApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6sh-cF-hYN" id="En4-9k-zEg">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="digital" translatesAutoresizingMaskIntoConstraints="NO" id="0bQ-Vd-LAP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQT-1a-HxT">
+                                                    <rect key="frame" x="166.5" y="64.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="MQT-1a-HxT" firstAttribute="centerY" secondItem="En4-9k-zEg" secondAttribute="centerY" id="5vU-DR-SwN"/>
+                                                <constraint firstItem="0bQ-Vd-LAP" firstAttribute="leading" secondItem="En4-9k-zEg" secondAttribute="leading" id="7HS-ET-PX9"/>
+                                                <constraint firstAttribute="bottom" secondItem="0bQ-Vd-LAP" secondAttribute="bottom" id="9nH-ho-yHN"/>
+                                                <constraint firstAttribute="trailing" secondItem="0bQ-Vd-LAP" secondAttribute="trailing" id="AaK-eh-jnq"/>
+                                                <constraint firstItem="MQT-1a-HxT" firstAttribute="centerX" secondItem="En4-9k-zEg" secondAttribute="centerX" id="KKV-Pc-Sul"/>
+                                                <constraint firstItem="0bQ-Vd-LAP" firstAttribute="top" secondItem="En4-9k-zEg" secondAttribute="top" id="WMC-tZ-juj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryImage" destination="0bQ-Vd-LAP" id="Pqg-si-3Iv"/>
+                                            <outlet property="categoryLabel" destination="MQT-1a-HxT" id="2pj-lS-17A"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LKi-ZQ-0XQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="9bv-Ig-jKT"/>
+                            <constraint firstItem="Nvv-7p-564" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="R3l-SJ-UDZ"/>
+                            <constraint firstItem="Nvv-7p-564" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yXk-s1-AAr"/>
+                            <constraint firstItem="Nvv-7p-564" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yfG-ct-KZ2"/>
+                            <constraint firstItem="Nvv-7p-564" firstAttribute="top" secondItem="LKi-ZQ-0XQ" secondAttribute="bottom" constant="8" id="yuo-iK-CFO"/>
                             <constraint firstItem="LKi-ZQ-0XQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zak-X2-5DC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="CODER SWAG" id="XDD-cb-Ukz"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="Nvv-7p-564" id="uyR-gk-ogD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -61,4 +105,7 @@
             <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="digital" width="1024" height="703"/>
+    </resources>
 </document>
